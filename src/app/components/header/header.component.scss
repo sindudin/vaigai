@@ -1,0 +1,124 @@
+@import '../../../scss/variables';
+
+.header__top {
+  border: 1px solid $light-grey;
+  padding: 10px 0;
+
+  .header__top-menu {
+    li {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &.normal-button {
+        padding: 10px 20px;
+        &:hover {
+          border-radius: 3px;
+          background: $green;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+          a.menu-button {
+            color: $white;
+          }
+        }
+      }
+
+      a.menu-button {
+        color: $medium-grey;
+        font-size: 1.4rem;
+        .app-icon {
+          margin-right: 5px;
+        }
+      }
+
+      &.dropdown__button:hover {
+        &:after {
+          opacity: 1;
+          -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+          -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+        }
+
+        .download__dropdown-container {
+          max-height: 300px;
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+          -webkit-transition-duration: 0s, 0.2s, 0.2s;
+          transition-duration: 0s, 0.2s, 0.2s;
+        }
+      }
+
+      &.dropdown__button {
+        &:after {
+          border: 8px solid transparent;
+          border-bottom-color: white;
+          content: "";
+          height: 0;
+          left: calc(50% - 4px);
+          opacity: 0;
+          -webkit-transition: 0.1s opacity cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition: 0.1s opacity cubic-bezier(0.39, 0.575, 0.565, 1);
+          position: absolute;
+          margin-top: -13px;
+          top: 100%;
+          width: 1px;
+        }
+
+        .download__dropdown-container {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          border-left: 1px solid rgba(0, 0, 0, 0.05);
+          border-radius: 3px;
+          box-shadow: 3px 2px 7px 1px rgba(0, 0, 0, 0.08);
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          top: 41px;
+          left: 0;
+          width: 100%;
+          transform: scale(0.4);
+          transform-origin: 10% top;
+          transition: 0.15s max-height 0.15s linear, 0.1s opacity cubic-bezier(0.39, 0.575, 0.565, 1), 0.15s transform cubic-bezier(0.1, 1.26, 0.83, 1);
+          z-index: 10;
+
+          .download__dropdown-wrap {
+            background: white;
+            border-radius: 3px;
+            color: gray;
+            cursor: auto;
+            white-space: nowrap;
+
+            .download__dropdown-list {
+              list-style: none;
+              margin: 0;
+              padding-bottom: 16px;
+              padding-left: 0;
+              padding-right: 0;
+              padding-top: 16px;
+
+              li {
+                display: block;
+                text-align: left;
+
+                a {
+                  font-size: 14px;
+                  padding: 10px 40px;
+                  display: block;
+                  color: $medium-grey;
+                  &:hover{
+                      color: $green;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}

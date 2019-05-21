@@ -1,0 +1,86 @@
+@import '../../../scss/variables';
+
+.footer__top {
+  .single-footer {
+    .footer-logo {
+      img {
+        width: 70%;
+      }
+    }
+
+    .footer-link {
+      margin-top: 25px;
+
+      li {
+        color: #5b646b;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        display: flex;
+        margin-bottom: 12px;
+        align-items: flex-start;
+
+        i {
+          margin-right: 9px;
+          margin-top: 2px;
+          color: $green;
+          font-size: 21px;
+        }
+      }
+    }
+
+    .section-heading {
+      position: relative;
+
+      &:after {
+        bottom: -10px;
+        width: 50px;
+      }
+
+      &.courses-list {
+        &:after {
+          width: 80px;
+        }
+      }
+    }
+
+    .footer__menu {
+      margin-top: 25px;
+
+      li {
+        padding: 5px 0;
+
+        a {
+          color: #5b646b;
+          font-size: 14px;
+          font-weight: 400;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+
+
+.footer__bottom {
+  border-top: 2px solid transparent;
+  border-image: repeating-linear-gradient(to right, #32325d 0%, #8080b5 100%);
+  border-image-slice: 1;
+  padding: 21px 0;
+
+  .copyright {
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-wrapper{
+    padding: 0;
+  }
+}
+

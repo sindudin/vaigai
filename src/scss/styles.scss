@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './variables';
+@import './default.scss';
 @import './icofont.css';
 
 @font-face {
@@ -109,17 +110,38 @@ li {
   list-style: none;
 }
 
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
 /**** Override the Bootstrap CSS ****/
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .container {
-      max-width: 1200px;
+    max-width: 1200px;
+  }
+}
+
+.section-heading {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 150px;
+    height: 5px;
+    background: repeating-linear-gradient(to right, #8080b5 0%, #32325d 100%);
+    margin-top: 0;
+    padding: 2px;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
   }
 }

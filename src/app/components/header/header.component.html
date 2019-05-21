@@ -30,11 +30,71 @@
     </div>
     <div class="header__main">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="../../../assets/images/logo.png" />
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-3 col-8">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="../../../assets/images/logo.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 col-md-9 col-4 mobile-pos">
+                    <div class="main-menu text-right">
+                        <div class="mobile-menu">
+                            <a href="javascript:;" class="mobile_menu_btn" (click)="mobileMenu()"><i
+                                    class="app-icon icofont-navigation-menu"></i> Menu</a>
+                            <nav *ngIf="mobileMenuDisplay">
+                                <ul>
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Academics<i class="app-icon icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Women's Art College</a></li>
+                                            <li><a href="#">CBSE School </a></li>
+                                            <li><a href="#">Matriculation School</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Admission</a></li>
+                                    <li><a href="#">Download Application Form<i
+                                                class="app-icon icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">CBSE school</a></li>
+                                            <li><a href="#">Matriculation school</a></li>
+                                            <li><a href="#">Art & Science</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Contact</a></li>
+
+                                    <li class="normal-button"><a href="#" class="menu-button"><i
+                                                class="app-icon icofont-teacher"></i>Staff Login</a></li>
+                                    <li class="normal-button"><a href="#" class="menu-button"><i
+                                                class="app-icon icofont-group-students"></i>Parent Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <nav class="no-mobile-menu">
+                            <ul>
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Academics<i class="app-icon icofont-simple-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Women's Art College</a></li>
+                                        <li><a href="#">CBSE School </a></li>
+                                        <li><a href="#">Matriculation School</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Admission</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<div class="slider-wrap">
+    <img src="../../../assets/images/banner-1.png" />
+</div>

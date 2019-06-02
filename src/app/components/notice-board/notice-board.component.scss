@@ -36,11 +36,15 @@
     }
   }
 }
+.notice-slider{
+  max-width: 1200px;
+}
+
 
 
 
 .notice-card {
-  width: 400px;
+  width: 380px;
   height: 220px;
   background-color: #fff;
   border-radius: 5px;
@@ -101,4 +105,16 @@
     }
 
   }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .notice-slider{
+    max-width: 100%;
+  }
+    .notice-card{
+      width: 280px;
+      height: auto;
+      flex-direction: column;
+      margin: auto;
+    }
 }

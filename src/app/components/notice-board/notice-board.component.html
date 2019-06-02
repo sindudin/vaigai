@@ -15,73 +15,30 @@
       </div>
     </div>
     <div class="row">
-      <div class="notice-container d-flex">
-        <div class="notice-card mb-20 d-flex">
-          <div class="notice-card-date d-flex align-item-center">
-            <div class="date-block">
-              <span class="date">27</span>
-              <span class="month">March</span>
+        <ngx-slick-carousel class="carousel notice-slider" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig" 
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <div class="notice-card mb-20 d-flex">
+              <div class="notice-card-date d-flex align-item-center">
+                <div class="date-block">
+                  <span class="date">{{slide.date}}</span>
+                  <span class="month">{{slide.month}}</span>
+                </div>
+              </div>
+              <div class="notice-card-text">
+                <h3>{{slide.heading}}</h3>
+                <p>{{slide.shortDec}}</p>
             </div>
-          </div>
-          <div class="notice-card-text">
-            <h3>Medical Camp</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belie..
-          </div>
-        </div>
-        <div class="notice-card mb-20 d-flex">
-          <div class="notice-card-date d-flex align-item-center">
-            <div class="date-block">
-              <span class="date">27</span>
-              <span class="month">March</span>
             </div>
-          </div>
-          <div class="notice-card-text">
-            <h3>Medical Camp</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belie..
-          </div>
-        </div>
-        <div class="notice-card mb-20 d-flex">
-          <div class="notice-card-date d-flex align-item-center">
-            <div class="date-block">
-              <span class="date">09</span>
-              <span class="month">May</span>
-            </div>
-          </div>
-          <div class="notice-card-text">
-            <h3>Medical Camp</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belie..
-          </div>
-        </div>
-        <div class="notice-card mb-20 d-flex">
-          <div class="notice-card-date d-flex align-item-center">
-            <div class="date-block">
-              <span class="date">09</span>
-              <span class="month">May</span>
-            </div>
-          </div>
-          <div class="notice-card-text">
-            <h3>Medical Camp</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belie..
-          </div>
-        </div>
-        <div class="notice-card mb-20 d-flex">
-          <div class="notice-card-date d-flex align-item-center">
-            <div class="date-block">
-              <span class="date">09</span>
-              <span class="month">May</span>
-            </div>
-          </div>
-          <div class="notice-card-text">
-            <h3>Medical Camp</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belie..
-          </div>
-        </div>
       </div>
+      </ngx-slick-carousel>
     </div>
   </div>
 </div>
+
+
